@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
+import {Link} from 'react-router-dom'
+
 import { motion } from "framer-motion";
-import Logo from "../../src/imgs/logo.png";
+
 import { SidebarData } from "../Data/Data";
-import { UilSignOutAlt, UilBars } from "@iconscout/react-unicons";
+import {  UilBars } from "@iconscout/react-unicons";
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
   const [expanded, setExpanded] = useState(true);
@@ -28,30 +30,28 @@ const Sidebar = () => {
       <motion.div
         className="Sidebar"
         variants={sidebarVariants}
-        animate={window.innerWidth <= 768 ? `${expanded}` : ""}
+         animate={window.innerWidth <= 768 ? `${expanded}` : ""}
       >
-        <div className="logo">
-          <img src={Logo} />
-          <span>
-            Sh<span>o</span>ps
-          </span>
-        </div>
+       
         <div className="menu">
           {SidebarData.map((item, index) => {
             return (
-              <div
+              <Link
+              to={item.route}
                 className={selected === index ? "menuItem active" : "menuItem"}
                 key={index}
                 onClick={() => setSelected(index)}
               >
+                
                 <item.icon />
                 <span>{item.heading}</span>
-              </div>
+              
+              </Link>
             );
           })}
-          <div className="menuItem">
+          {/* <div className="menuItem">
             <UilSignOutAlt />
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </>
