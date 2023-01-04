@@ -7,8 +7,9 @@ const Cards = () => {
     <div className="Cards">
       {cardsData.map((card, id) => {
         return (
-          <div clasName="parentContainer">
-            <Card 
+          <div className="parentContainer">
+            <Card
+            key={card.name} 
             title={card.title}
             color={card.color}
             barvalue={card.barvalue}

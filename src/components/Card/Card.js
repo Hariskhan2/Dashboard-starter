@@ -34,6 +34,7 @@ const CompactCard = ({ param, setExpanded }) => {
         <CircularProgressbar
           value={param.barvalue}
           text={`${param.barvalue}%`}
+          style={{ stroke: "yellow" }}
         />
         <span>{param.title}</span>
       </div>
