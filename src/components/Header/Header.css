@@ -1,0 +1,23 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items:center;
+    background: linear-gradient(
+    106.37deg,
+    #267015 15.63%,
+    #66bc90 50.55%,
+    #267015 90.85%
+  );
+}
+.logo > img {
+    width: 10rem;
+    height: 5rem;
+  }
+  .nav_elements a{
+    display:inline-block;
+    padding:20px;
+    color:white;
+    text-decoration: none;
+  }

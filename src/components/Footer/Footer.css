@@ -1,0 +1,31 @@
+.Footer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    border-style: solid;
+    border-radius:20px;
+    margin-bottom: 1rem;
+    border-color: rgb(14, 68, 22);
+    background-color: rgb(236, 241, 245);
+    /* position: fixed;
+    width: 91rem; */
+
+    
+}
+h4{
+    color: rgb(14, 68, 22);
+}
+.line_1 a,.line_2 a, .line_3 a, .line_4 a{
+display:flex;
+flex-direction: column;
+text-decoration: none;
+color:rgb(76, 91, 105);
+margin-top:1rem;
+}
+.line_5 a{
+    display:inline-block;
+    
+    text-decoration: none;
+    color:rgb(76, 91, 105);
+    margin-right:1rem; 
+}
